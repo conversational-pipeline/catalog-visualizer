@@ -40,14 +40,9 @@ export default {
       return fetch(`http://localhost:3000/search?labels=${labels}`)
         .then(res => res.json())
         .then(data => {
-          this.jsonValue = data;
-          return data
+          this.jsonValue = data
+          this.remainingConcepts = data.focusedLabelResults[0].result.remaining.map(r => r.conceptId)
         })
-        .then(data => {
-          if (data) {
-            this.remainingConcepts = data.focusedLabelResults[0].result.remaining.map(r => r.conceptId)
-          }
-        });
     },
     isItemIdentified(json: any): boolean {
       if (json === null) {
