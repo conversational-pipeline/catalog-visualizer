@@ -10,6 +10,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "bulma": "^0.7.4",
     "vue": "^2.6.6",
     "vue-json-component": "^0.2.1",
     "vue-json-pretty": "^1.6.0",

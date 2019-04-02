@@ -4,6 +4,7 @@
       <router-link to="/">Search</router-link> |
       <router-link to="/transform">Transform</router-link>
     </div>
+    <hr /> <br />
     <router-view/>
   </div>
 </template>
