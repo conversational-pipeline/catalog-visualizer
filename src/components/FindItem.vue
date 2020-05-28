@@ -1,6 +1,6 @@
 <template>
   <div id="find-item">
-    <select name="" id="">
+    <select name="realm" id="realm-input">
       <option v-for="realm in realms" :key="realm" >
         {{ realm }}
       </option>
