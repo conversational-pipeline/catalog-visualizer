@@ -19,7 +19,7 @@
         <div class="starting-item">{{ startingItem }}</div>
         <div>👇</div>
         <ul class="items-found">
-          <li v-for="result in results">
+          <li v-for="(result) in results" :key="result.label">
             <div class="attribute">{{ result.label }}</div>
             <div>👇</div>
             <div class="item">{{ result.item.displayName}}</div>
@@ -38,6 +38,11 @@ export default {
   components: {
     "vue-json-pretty": VueJsonPretty.default
   },
+  mounted() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const ids = urlParams.get("id");
+    (document.querySelector('#item') as HTMLTextAreaElement).value = ids || ''
+  },
   data() {
     return {
       startingItem: null,
@@ -46,6 +51,9 @@ export default {
     };
   },
   methods: {
+    startingItem: null,
+    jsonValue: null,
+    results: null,
     onSubmit(evt: any) {
       const item = evt.target.item.value;
       this.startingItem = item;

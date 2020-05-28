@@ -9,7 +9,7 @@ import Vue from 'vue';
 import TransformItem from '@/components/TransformItem.vue'; // @ is an alias to /src
 
 export default Vue.extend({
-  name: 'home',
+  name: 'transform',
   components: {
     TransformItem,
   },

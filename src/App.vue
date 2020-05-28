@@ -4,7 +4,6 @@
       <router-link to="/">Search</router-link> |
       <router-link to="/transform">Transform</router-link>
     </div>
-    <hr /> <br />
     <router-view/>
   </div>
 </template>
@@ -19,6 +18,8 @@
 }
 #nav {
   padding: 30px;
+  border-bottom: rgba(0, 0, 0, 0.5) solid 1px;
+  margin-bottom: 20px;
 }
 
 #nav a {
